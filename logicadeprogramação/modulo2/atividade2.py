@@ -30,9 +30,8 @@ pasageiros = int (input("quantos pasageiros comporta?"))
 
 if rodas <=3:
     print ("categoria A")
-else:
-    if peso <=3500:
-        print ("categoria B")
+elif rodas == 4 and pasageiros <= 8 and peso <=3500:
+    print ("categoria B")
     else:
         if peso >3500: 
             print("categoria C")

@@ -19,25 +19,14 @@ rodas = int (input("quantas rodas tem?") )
 peso = int (input("qual e o pesso do veiculo?"))
 pasageiros = int (input("quantos pasageiros comporta?"))
 
-#A, A é para veículos motorizados de duas ou três rodas.
-#A, B é para 4 rodas ou mais, desde que com peso até 3.500 quilos ou até 8 passageiros mais o motorista.
-#A, C é para veículo motorizado utilizado em transporte de carga, cujo peso bruto total seja maior que três mil e quinhentos quilos.
-#A, D é para veículo motorizado utilizado no transporte de passageiros, cuja lotação exceda a oito lugares + o motorista
-#E a E, é aí que complica…, é para combinação de veículos em que a unidade tratora se enquadre nas 
-# categorias B, C ou D e cuja unidade acoplada, reboque, semirreboque, 
-# trailer ou articulada tenha 6.000 kg (seis mil quilogramas) ou mais de peso bruto total, ou cuja 
-# lotação exceda a 8 (oito) lugares
-
 if rodas <=3:
     print ("categoria A")
 elif rodas == 4 and pasageiros <= 8 and peso <=3500:
     print ("categoria B")
-    else:
-        if peso >3500: 
-            print("categoria C")
-        else:
-            if pasageiros >8:
-                print("categoria D")
-            else:
-                if peso >=6000:
-                    print("categoria E")                
+elif rodas >= 4 and pasageiros <=8 and peso >3500 and peso <= 6000:
+    print ("categoria c")
+elif rodas >=4 and pasageiros > 8:
+    print ("categoria D")
+elif rodas >=4 and peso > 6000:
+    print ("categoria E")
+else: print ("informaçoes nao condis com nehuma categoria")

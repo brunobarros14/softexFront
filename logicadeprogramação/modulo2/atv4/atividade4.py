@@ -1,18 +1,18 @@
-print("calculadora da solftex")
-f1 = float (input("digite o primeiro numero"))
-f2 = float (input("digite o segundo numero"))
-op = (input("Digite a operação desejada (Soma: +, Subtrair: -, Multiplar: *, Dividir: /) :"))
-print (f1, op, f2"=" calculadora)
-
-def calculadora(f1, f2, op):
+def calculadora(num1, num2, op):
     if op == '+':
-        return f1 + f2
+        return num1 + num2
     elif op == '-':
-        return f1 - f2
+        return num1 - num2
     elif op == '*':
-        return f1 * f2
+        return num1 * num2
     elif op == '/':
-        return f1 / f2
+        return num1 / num2
     else:
         return 0
-    
+
+
+print(".::Calculadora da Softex::.")
+num1 = float(input("Digite o primeiro número: "))
+num2 = float(input("Digite o segundo número: "))
+op = input("Digite a operação desejada (Soma: +, Subtrair: -, Multiplar: *, Dividir: /) : ")
+print(num1, op, num2, "=", calculadora(num1, num2, op))
